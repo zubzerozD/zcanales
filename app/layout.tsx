@@ -5,15 +5,15 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "zubzerozd.com",
+    default: "zubzerozd",
     template: "%s | zubzerozd.com",
   },
   description: "Co-founder of unkey.dev and founder of planetfall.io",
   openGraph: {
-    title: "zubzerozd.com",
+    title: "zubzerozd",
     description: "Co-founder of unkey.dev and founder of planetfall.io",
     url: "https://zubzerozd.com",
-    siteName: "zubzerozd.com",
+    siteName: "zubzerozd",
     images: [
       {
         url: "https://zubzerozd.com/og.png",
@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}
     suppressHydrationWarning={true}
-    
+
     >
       <head>
         {/* Analytics removido por simplicidad, puedes agregarlo si tienes el token */}
