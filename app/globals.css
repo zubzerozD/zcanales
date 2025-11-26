@@ -1,15 +1,50 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-calsans: "Cal Sans", sans-serif; /* Asegura que esta variable exista o se mapee */
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-display: var(--font-calsans);
+  
+  /* Animaciones migradas */
+  --animate-fade-in: fade-in 3s ease-in-out forwards;
+  --animate-title: title 3s ease-out forwards;
+  --animate-fade-left: fade-left 3s ease-in-out forwards;
+  --animate-fade-right: fade-right 3s ease-in-out forwards;
+  --animate-glow: glow 1s; /* Agregué este placeholder si lo usabas, o puedes borrarlo */
+}
+
+/* Keyframes estándar de CSS */
+@keyframes fade-in {
+  0% { opacity: 0%; }
+  75% { opacity: 0%; }
+  100% { opacity: 100%; }
+}
+
+@keyframes fade-left {
+  0% { transform: translateX(100%); opacity: 0%; }
+  30% { transform: translateX(0%); opacity: 100%; }
+  100% { opacity: 0%; }
+}
+
+@keyframes fade-right {
+  0% { transform: translateX(-100%); opacity: 0%; }
+  30% { transform: translateX(0%); opacity: 100%; }
+  100% { opacity: 0%; }
+}
+
+@keyframes title {
+  0% { line-height: 0%; letter-spacing: 0.25em; opacity: 0; }
+  25% { line-height: 0%; opacity: 0%; }
+  80% { opacity: 100%; }
+  100% { line-height: 100%; opacity: 100%; }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,48 +57,48 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 
-/* app/globals.css */
-@layer base {
+/* Utilidades personalizadas */
+@layer utilities {
   .text-edge-outline {
     -webkit-text-stroke: 1px rgba(255,255,255,0.3);
   }
 }
 
-/* Estilos para el código dentro de MDX */
-[data-rehype-pretty-code-fragment] code {
-  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-black;
-  counter-reset: line;
-  box-decoration-break: clone;
-}
-[data-rehype-pretty-code-fragment] .line {
-  @apply px-4 py-1;
-}
-[data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
-  counter-increment: line;
-  content: counter(line);
-  display: inline-block;
-  width: 1rem;
-  margin-right: 1rem;
-  text-align: right;
-  color: gray;
-}
-[data-rehype-pretty-code-fragment] .line--highlighted {
-  /* CORREGIDO: Usar sintaxis moderna de opacidad (bg-color/opacity) */
-  @apply bg-zinc-300/10;
-}
-[data-rehype-pretty-code-fragment] .line-highlighted span {
-  @apply relative;
-}
-[data-rehype-pretty-code-fragment] .word--highlighted {
-  /* CORREGIDO: Usar sintaxis moderna de opacidad */
-  @apply rounded-md bg-zinc-300/10 p-1;
-}
-[data-rehype-pretty-code-title] {
-  @apply mt-4 py-2 px-4 text-sm font-medium;
-}
-[data-rehype-pretty-code-title] + pre {
-  @apply mt-0;
+/* Estilos MDX */
+@layer components {
+  [data-rehype-pretty-code-fragment] code {
+    @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-black;
+    counter-reset: line;
+    box-decoration-break: clone;
+  }
+  [data-rehype-pretty-code-fragment] .line {
+    @apply px-4 py-1;
+  }
+  [data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    width: 1rem;
+    margin-right: 1rem;
+    text-align: right;
+    color: gray;
+  }
+  [data-rehype-pretty-code-fragment] .line--highlighted {
+    @apply bg-zinc-300/10;
+  }
+  [data-rehype-pretty-code-fragment] .line-highlighted span {
+    @apply relative;
+  }
+  [data-rehype-pretty-code-fragment] .word--highlighted {
+    @apply rounded-md bg-zinc-300/10 p-1;
+  }
+  [data-rehype-pretty-code-title] {
+    @apply mt-4 py-2 px-4 text-sm font-medium;
+  }
+  [data-rehype-pretty-code-title] + pre {
+    @apply mt-0;
+  }
 }
