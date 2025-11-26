@@ -2,6 +2,7 @@ import * as runtime from "react/jsx-runtime";
 import Image from "next/image";
 import Link from "next/link";
 
+// Función para ejecutar el código MDX compilado
 const useMDXComponent = (code: string) => {
 	const fn = new Function(code);
 	return fn({ ...runtime }).default;
@@ -10,7 +11,6 @@ const useMDXComponent = (code: string) => {
 const components = {
 	Image,
 	a: Link,
-	// Aquí podrías agregar tus componentes personalizados para MDX si los tienes
 };
 
 interface MdxProps {
@@ -18,6 +18,9 @@ interface MdxProps {
 }
 
 export function Mdx({ code }: MdxProps) {
+	// Si no hay código (posiblemente por un error de Velite o archivo vacío), no renderizamos nada para evitar crash
+	if (!code) return null;
+
 	const Component = useMDXComponent(code);
 
 	return (
