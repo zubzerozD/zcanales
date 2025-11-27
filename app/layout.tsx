@@ -2,18 +2,19 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
+import { Navigation } from "./components/nav"; // <--- Importamos el componente
 
 export const metadata: Metadata = {
   title: {
-    default: "zubzerozd",
-    template: "%s | zubzerozd.com",
+    default: "zubzerozD.com",
+    template: "%s | zubzerozD.com",
   },
   description: "Co-founder of unkey.dev and founder of planetfall.io",
   openGraph: {
-    title: "zubzerozd",
+    title: "zubzerozD.com",
     description: "Co-founder of unkey.dev and founder of planetfall.io",
     url: "https://zubzerozd.com",
-    siteName: "zubzerozd",
+    siteName: "zubzerozD.com",
     images: [
       {
         url: "https://zubzerozd.com/og.png",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "zubzerozd",
+    title: "Chronark",
     card: "summary_large_image",
   },
   icons: {
@@ -60,18 +61,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}
-    suppressHydrationWarning={true}
-
-    >
+    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
-        {/* Analytics removido por simplicidad, puedes agregarlo si tienes el token */}
+        {/* Aquí puedes agregar scripts de analítica si los necesitas */}
       </head>
       <body
         className={`bg-black ${
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
         }`}
       >
+        <Navigation /> {/* <--- Aquí se renderiza el menú flotante */}
         {children}
       </body>
     </html>
