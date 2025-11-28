@@ -93,6 +93,7 @@ export default function Particles({
 		}
 	};
 
+	// Genera los parámetros iniciales de un círculo
 	const circleParams = (): Circle => {
 		const x = Math.floor(Math.random() * canvasSize.current.w);
 		const y = Math.floor(Math.random() * canvasSize.current.h);
@@ -118,6 +119,7 @@ export default function Particles({
 		};
 	};
 
+	// Dibuja un círculo en el canvas
 	const drawCircle = (circle: Circle, update = false) => {
 		if (context.current) {
 			const { x, y, translateX, translateY, size, alpha } = circle;
@@ -134,6 +136,7 @@ export default function Particles({
 		}
 	};
 
+	// Limpia el contexto del canvas
 	const clearContext = () => {
 		if (context.current) {
 			context.current.clearRect(
@@ -145,6 +148,7 @@ export default function Particles({
 		}
 	};
 
+	// Dibuja todas las partículas en el canvas
 	const drawParticles = () => {
 		clearContext();
 		const particleCount = quantity;
@@ -153,7 +157,7 @@ export default function Particles({
 			drawCircle(circle);
 		}
 	};
-
+	// Remapea un valor de un rango a otro
 	const remapValue = (
 		value: number,
 		start1: number,
@@ -165,7 +169,7 @@ export default function Particles({
 			((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
 		return remapped > 0 ? remapped : 0;
 	};
-
+	// Animación principal
 	const animate = () => {
 		clearContext();
 		circles.current.forEach((circle: Circle, i: number) => {
