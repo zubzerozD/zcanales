@@ -1,8 +1,8 @@
 "use client";
-import { ArrowLeft, Eye, Github, Instagram } from "lucide-react";
+import { ArrowLeft, Eye, Github, Instagram, Twitter } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // <--- 1. Importamos Variants
 
 type Props = {
     project: {
@@ -14,7 +14,8 @@ type Props = {
     views: number;
 };
 
-const animation = {
+// 2. Tipamos la constante explícitamente
+const animation: Variants = {
     hidden: { y: 20, opacity: 0 },
     show: {
         y: 0,
