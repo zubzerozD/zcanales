@@ -4,6 +4,7 @@ import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
+import { ArticleContent } from "./article-content"; // <--- Importamos el nuevo componente
 
 export const revalidate = 60;
 
@@ -37,15 +38,14 @@ export default async function PostPage(props: Props) {
         (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
 
     return (
-        // CAMBIO 1: De bg-zinc-50 a bg-zinc-900 (fondo oscuro)
         <div className="bg-zinc-900 min-h-screen">
             <Header project={project} views={views} />
             <ReportView slug={slug} />
 
-            {/* CAMBIO 2: Agregamos 'prose-invert' para que el texto sea blanco */}
-            <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless prose-invert">
+            {/* Usamos el wrapper animado en lugar del <article> directo */}
+            <ArticleContent>
                 <Mdx code={project.body} />
-            </article>
+            </ArticleContent>
         </div>
     );
 }

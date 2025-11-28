@@ -2,21 +2,21 @@
 import React from "react";
 import { Card } from "../components/card";
 import {
-    AppWindow, // Para Software/Windows
-    Wrench, // Para Mantenimiento físico/técnico
-    GraduationCap, // Para Educación/Datos (Servicios especiales)
-    Globe, // Para Desarrollo Web
-    ShoppingCart, // Para E-Commerce
-    Bot, // Para Automatización
-    Check, // Para Verificación/Calidad
+    AppWindow, // Software
+    Wrench, // Mantenimiento
+    GraduationCap, // Especiales
+    Globe, // Web
+    ShoppingCart, // Ecommerce
+    Bot, // Automatización
+    Check,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
-    // --- SECCIÓN SOPORTE TÉCNICO (DIVIDIDA) ---
+    // --- SECCIÓN SOPORTE TÉCNICO ---
     {
         title: "Software & Sistema",
-        description: "Soluciones rápidas para problemas de Windows, programas y drivers. Todo lo que tu sistema necesita para correr suave.",
+        description: "Soluciones rápidas para Windows, programas y drivers.",
         icon: <AppWindow size={32} />,
         items: [
             "Activación Windows y Office 365 (Remoto/Presencial)",
@@ -24,12 +24,12 @@ const services = [
             "Resolución de Pantallazos Azules (BSOD)",
             "Actualización y corrección de Drivers",
             "Instalación de programas esenciales",
-            "Configuración de Antivirus y Control Parental",
+            "Configuración de Antivirus y Firewall",
         ],
     },
     {
         title: "Mantenimiento & Potencia",
-        description: "Limpieza profunda y optimización para que tu equipo vuele. Ideal para gamers o PCs lentos.",
+        description: "Limpieza y optimización para que tu equipo vuele.",
         icon: <Wrench size={32} />,
         items: [
             "Formateo e instalación limpia (Presencial)",
@@ -42,50 +42,50 @@ const services = [
     },
     {
         title: "Servicios Especiales",
-        description: "Soluciones avanzadas para situaciones críticas y educación digital personalizada.",
+        description: "Soluciones críticas y educación digital.",
         icon: <GraduationCap size={32} />,
         items: [
             "Recuperación de datos borrados",
             "Clases de uso de PC para adultos mayores",
-            "Copias de seguridad y migración de datos",
-            "Asesoría para compra o upgrade de equipos",
+            "Copias de seguridad y respaldo",
             "Soporte Remoto y Presencial en cercanías",
+            "Asesoría en compra de equipos",
         ],
     },
 
-    // --- SECCIÓN WEB (CONSOLIDADA) ---
+    // --- SECCIÓN WEB ---
     {
         title: "Desarrollo Web",
-        description: "Tu presencia en internet con tecnología moderna. Sitios rápidos, bonitos y funcionales.",
+        description: "Tu presencia online con tecnología moderna.",
         icon: <Globe size={32} />,
         items: [
             "Sitios informativos y Landing Pages",
             "Webs con Next.js (Alta velocidad y SEO)",
-            "Portafolios y páginas personales",
+            "Portafolios y páginas tipo 'Link en Bio'",
             "Rediseño de sitios antiguos",
             "Correos corporativos (@tuempresa.cl)",
         ],
     },
     {
         title: "E-Commerce",
-        description: "Empieza a vender online con una tienda segura y fácil de administrar.",
+        description: "Vende online con tiendas seguras.",
         icon: <ShoppingCart size={32} />,
         items: [
             "Tiendas Shopify y WooCommerce",
             "Carritos de compra a medida",
             "Catálogos digitales",
-            "Integración de pagos (WebPay/MercadoPago)",
+            "Integración de WebPay/MercadoPago",
         ],
     },
     {
-        title: "Automatización",
-        description: "Ahorra tiempo conectando tus herramientas favoritas.",
+        title: "Optimización & Diseño",
+        description: "Mejora la experiencia y automatiza procesos.",
         icon: <Bot size={32} />,
         items: [
-            "Formularios inteligentes a Email/WhatsApp",
+            "Optimización de velocidad y SEO",
+            "Diseño UI/UX y Branding básico",
+            "Automatizaciones (Emails/Bots)",
             "Integración con Google Analytics",
-            "Chatbots básicos para atención",
-            "Conexión con bases de datos",
         ],
     },
 ];
@@ -111,8 +111,8 @@ export default function ServicesPage() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="mt-4 text-lg text-zinc-400"
                     >
-                        Desde revivir tu computadora hasta lanzar tu negocio en internet.
-                        Servicios profesionales adaptados a tus necesidades.
+                        Soporte técnico experto y desarrollo web de alto nivel.
+                        Todo lo que necesitas en un solo lugar.
                     </motion.p>
                 </div>
 
