@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Navigation } from "./components/nav"; // <--- Importamos el componente
+import { SpeedInsights } from "@vercel/speed-insights/next"; // <--- Importamos Speed Insights
 
 export const metadata: Metadata = {
   title: {
@@ -74,6 +75,7 @@ export default function RootLayout({
       >
         <Navigation /> {/* <--- Aquí se renderiza el menú flotante */}
         {children}
+        <SpeedInsights /> {/* <--- Aquí se renderiza Speed Insights */}
       </body>
     </html>
   );

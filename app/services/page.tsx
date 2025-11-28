@@ -5,10 +5,10 @@ import {
     AppWindow, // Para Software/Windows
     Wrench, // Para Mantenimiento físico/técnico
     GraduationCap, // Para Educación/Datos (Servicios especiales)
-    Globe,
-    ShoppingCart,
-    Bot,
-    Check,
+    Globe, // Para Desarrollo Web
+    ShoppingCart, // Para E-Commerce
+    Bot, // Para Automatización
+    Check, // Para Verificación/Calidad
 } from "lucide-react";
 import { motion } from "framer-motion";
 
