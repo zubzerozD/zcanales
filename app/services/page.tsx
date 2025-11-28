@@ -2,91 +2,90 @@
 import React from "react";
 import { Card } from "../components/card";
 import {
-    MonitorCog,
+    AppWindow, // Para Software/Windows
+    Wrench, // Para Mantenimiento físico/técnico
+    GraduationCap, // Para Educación/Datos (Servicios especiales)
     Globe,
     ShoppingCart,
-    Rocket,
-    Palette,
     Bot,
     Check,
-    Server,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
+    // --- SECCIÓN SOPORTE TÉCNICO (DIVIDIDA) ---
     {
-        title: "Soporte Técnico & PC",
-        description: "Mantenimiento, reparación y optimización de equipos. Recupera la velocidad y seguridad de tu ordenador.",
-        icon: <MonitorCog size={32} />,
+        title: "Software & Sistema",
+        description: "Soluciones rápidas para problemas de Windows, programas y drivers. Todo lo que tu sistema necesita para correr suave.",
+        icon: <AppWindow size={32} />,
         items: [
-            "Activaciones Windows/Office (Remoto/Presencial)",
-            "Formateo e instalación limpia (Presencial)",
-            "Diagnóstico y reparación de registros (Remoto)",
-            "Resolución de pantallazos azules y errores",
-            "Limpieza de virus y optimización gaming",
-            "Recuperación de datos y archivos borrados",
-            "Clases de uso de PC para adultos mayores",
+            "Activación Windows y Office 365 (Remoto/Presencial)",
+            "Reparación de registros y archivos del sistema",
+            "Resolución de Pantallazos Azules (BSOD)",
+            "Actualización y corrección de Drivers",
+            "Instalación de programas esenciales",
+            "Configuración de Antivirus y Control Parental",
         ],
     },
     {
-        title: "Desarrollo Web Moderno",
-        description: "Sitios web creados con Next.js y React. Tecnología de punta para destacar sobre la competencia.",
+        title: "Mantenimiento & Potencia",
+        description: "Limpieza profunda y optimización para que tu equipo vuele. Ideal para gamers o PCs lentos.",
+        icon: <Wrench size={32} />,
+        items: [
+            "Formateo e instalación limpia (Presencial)",
+            "Limpieza de software y optimización",
+            "Optimización dedicada para Juegos (Gaming)",
+            "Diagnóstico completo de hardware",
+            "Corrección de errores en disco",
+            "Restauración de Windows sin perder archivos",
+        ],
+    },
+    {
+        title: "Servicios Especiales",
+        description: "Soluciones avanzadas para situaciones críticas y educación digital personalizada.",
+        icon: <GraduationCap size={32} />,
+        items: [
+            "Recuperación de datos borrados",
+            "Clases de uso de PC para adultos mayores",
+            "Copias de seguridad y migración de datos",
+            "Asesoría para compra o upgrade de equipos",
+            "Soporte Remoto y Presencial en cercanías",
+        ],
+    },
+
+    // --- SECCIÓN WEB (CONSOLIDADA) ---
+    {
+        title: "Desarrollo Web",
+        description: "Tu presencia en internet con tecnología moderna. Sitios rápidos, bonitos y funcionales.",
         icon: <Globe size={32} />,
         items: [
             "Sitios informativos y Landing Pages",
-            "Portafolios y páginas 'Link en Bio'",
-            "Webs autoadministrables para negocios",
-            "Aplicaciones web estáticas (Súper rápidas)",
-            "Desarrollo a medida con React/Next.js",
-            "Migración de sitios antiguos a tecnologías modernas",
+            "Webs con Next.js (Alta velocidad y SEO)",
+            "Portafolios y páginas personales",
+            "Rediseño de sitios antiguos",
+            "Correos corporativos (@tuempresa.cl)",
         ],
     },
     {
-        title: "E-Commerce & Tiendas",
-        description: "Vende tus productos online con una tienda profesional, segura y fácil de gestionar.",
+        title: "E-Commerce",
+        description: "Empieza a vender online con una tienda segura y fácil de administrar.",
         icon: <ShoppingCart size={32} />,
         items: [
-            "Tiendas Shopify (Básicas y Pro)",
-            "WooCommerce (WordPress)",
-            "Desarrollo de carritos a medida (Custom)",
-            "Catálogos digitales sin pasarela",
-            "Integración de WebPay, MercadoPago y Flow",
+            "Tiendas Shopify y WooCommerce",
+            "Carritos de compra a medida",
+            "Catálogos digitales",
+            "Integración de pagos (WebPay/MercadoPago)",
         ],
     },
     {
-        title: "Optimización Web",
-        description: "Mejora la velocidad, seguridad y posición en Google de tu sitio web actual.",
-        icon: <Rocket size={32} />,
+        title: "Automatización",
+        description: "Ahorra tiempo conectando tus herramientas favoritas.",
+        icon: <Bot size={32} />,
         items: [
-            "Optimización de velocidad de carga (Core Vitals)",
-            "Auditoría y mejoras SEO para Google",
-            "Limpieza de Malware en WordPress",
-            "Actualización de plugins y seguridad",
-            "Configuración de copias de seguridad",
-        ],
-    },
-    {
-        title: "Diseño & Branding",
-        description: "Identidad visual que enamora. Diseño de interfaces modernas y experiencias de usuario memorables.",
-        icon: <Palette size={32} />,
-        items: [
-            "Diseño UI/UX en Figma",
-            "Prototipado interactivo",
-            "Rediseño visual de webs antiguas",
-            "Diseño de Logotipos y Banners",
-            "Creación de Favicons y activos digitales",
-        ],
-    },
-    {
-        title: "Automatización & Cloud",
-        description: "Conecta tus herramientas y automatiza procesos para ahorrar tiempo y dinero.",
-        icon: <Server size={32} />,
-        items: [
-            "Correos corporativos (@tuempresa.cl)",
-            "Configuración de Dominios y SSL (https)",
-            "Formularios inteligentes a Email/Database",
-            "Integración con WhatsApp Business",
-            "Conexión con Google Analytics y Tag Manager",
+            "Formularios inteligentes a Email/WhatsApp",
+            "Integración con Google Analytics",
+            "Chatbots básicos para atención",
+            "Conexión con bases de datos",
         ],
     },
 ];
@@ -104,7 +103,7 @@ export default function ServicesPage() {
                         transition={{ duration: 0.5 }}
                         className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl font-display"
                     >
-                        Servicios Profesionales
+                        Soluciones Tecnológicas
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -112,8 +111,8 @@ export default function ServicesPage() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="mt-4 text-lg text-zinc-400"
                     >
-                        Desde soporte técnico especializado hasta desarrollo de software de alto nivel.
-                        Soluciones tecnológicas adaptadas a tus necesidades.
+                        Desde revivir tu computadora hasta lanzar tu negocio en internet.
+                        Servicios profesionales adaptados a tus necesidades.
                     </motion.p>
                 </div>
 
