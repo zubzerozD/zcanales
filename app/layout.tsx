@@ -62,8 +62,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}
-    
+    <html lang="es" className={[inter.variable, calSans.variable].join(" ")}
+    suppressHydrationWarning={true}
+    data-lt-installed="true"
     >
       <head>
         {/* Aquí puedes agregar scripts de analítica si los necesitas */}
