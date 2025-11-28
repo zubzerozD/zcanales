@@ -7,6 +7,7 @@ import {
 	LayoutGrid,
 	Mail,
 	Instagram,
+	Server,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,9 +17,7 @@ import { AnimatePresence, motion } from "framer-motion";
 // Lista de proyectos para el desplegable (Puedes agregar más)
 const projectLinks = [
 	{ title: "Todos los proyectos", href: "/projects" },
-	{ title: "Planetfall", href: "/projects/planetfall" },
-	{ title: "Highstorm", href: "/projects/highstorm" },
-	{ title: "Unkey", href: "/projects/unkey" },
+	{ title: "Test", href: "/projects/access" },
 ];
 
 export const Navigation: React.FC = () => {
@@ -72,10 +71,9 @@ export const Navigation: React.FC = () => {
 						onClick={() => setDropdownOpen(!isDropdownOpen)}
 						className={`
               flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200
-              ${
-								pathname.startsWith("/projects") || isDropdownOpen
-									? "bg-zinc-800 text-zinc-100"
-									: "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50"
+              ${pathname.startsWith("/projects") || isDropdownOpen
+								? "bg-zinc-800 text-zinc-100"
+								: "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50"
 							}
             `}
 					>
@@ -83,9 +81,8 @@ export const Navigation: React.FC = () => {
 						<span>Proyectos</span>
 						<ChevronDown
 							size={14}
-							className={`transition-transform duration-300 ${
-								isDropdownOpen ? "rotate-180" : ""
-							}`}
+							className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""
+								}`}
 						/>
 					</button>
 
@@ -115,6 +112,13 @@ export const Navigation: React.FC = () => {
 						)}
 					</AnimatePresence>
 				</div>
+
+				<div className="w-px h-6 bg-zinc-800 mx-1" />
+				{/* NUEVO BOTÓN SERVICIOS */}
+				<NavItem href="/services" active={pathname === "/services"}>
+					<Server size={18} /> {/* Necesitas importar Server de lucide-react arriba */}
+					<span>Servicios</span>
+				</NavItem>
 
 				{/* Botón Contacto */}
 				<NavItem href="/contact" active={pathname === "/contact"}>
@@ -146,10 +150,9 @@ const NavItem = ({
 		href={href}
 		className={`
       flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-full transition-all duration-200
-      ${
-				active
-					? "bg-zinc-100 text-zinc-900 shadow-md"
-					: "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50"
+      ${active
+				? "bg-zinc-100 text-zinc-900 shadow-md"
+				: "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50"
 			}
     `}
 	>
