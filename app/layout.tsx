@@ -7,18 +7,18 @@ import { SpeedInsights } from "@vercel/speed-insights/next"; // <--- Importamos 
 
 export const metadata: Metadata = {
   title: {
-    default: "zubzerozD.com",
-    template: "%s | zubzerozD.com",
+    default: "zubzerozD",
+    template: "%s | zubzerozD",
   },
   description: "Co-founder of unkey.dev and founder of planetfall.io",
   openGraph: {
-    title: "zubzerozD.com",
+    title: "zubzerozD",
     description: "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://zubzerozd.com",
-    siteName: "zubzerozD.com",
+    url: "https://zubzerozD",
+    siteName: "zubzerozD",
     images: [
       {
-        url: "https://zubzerozd.com/og.png",
+        url: "https://zubzerozD/og.png",
         width: 1920,
         height: 1080,
       },

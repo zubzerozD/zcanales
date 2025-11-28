@@ -1,7 +1,8 @@
 "use client";
-import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
+import { ArrowLeft, Eye, Github, Instagram } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 type Props = {
     project: {
@@ -10,9 +11,18 @@ type Props = {
         description: string;
         repository?: string;
     };
-
     views: number;
 };
+
+const animation = {
+    hidden: { y: 20, opacity: 0 },
+    show: {
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.5, ease: "easeOut" }
+    },
+};
+
 export const Header: React.FC<Props> = ({ project, views }) => {
     const ref = useRef<HTMLElement>(null);
     const [isIntersecting, setIntersecting] = useState(true);
@@ -30,12 +40,12 @@ export const Header: React.FC<Props> = ({ project, views }) => {
             href: project.url,
         });
     }
+
     useEffect(() => {
         if (!ref.current) return;
         const observer = new IntersectionObserver(([entry]) =>
             setIntersecting(entry.isIntersecting),
         );
-
         observer.observe(ref.current);
         return () => observer.disconnect();
     }, []);
@@ -65,8 +75,8 @@ export const Header: React.FC<Props> = ({ project, views }) => {
                                 views,
                             )}
                         </span>
-                        <Link target="_blank" href="https://twitter.com/zubzerozd">
-                            <Twitter
+                        <Link target="_blank" href="https://instagram.com/zubzerozd">
+                            <Instagram
                                 className={`w-6 h-6 duration-200 hover:font-medium ${isIntersecting
                                         ? " text-zinc-400 hover:text-zinc-100"
                                         : "text-zinc-600 hover:text-zinc-900"
@@ -94,18 +104,24 @@ export const Header: React.FC<Props> = ({ project, views }) => {
                     </Link>
                 </div>
             </div>
-            <div className="container mx-auto relative isolate overflow-hidden  py-24 sm:py-32">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center">
-                    <div className="mx-auto max-w-2xl lg:mx-0">
+
+            <div className="container mx-auto relative isolate overflow-hidden py-24 sm:py-32">
+                <motion.div
+                    initial="hidden"
+                    animate="show"
+                    transition={{ staggerChildren: 0.2 }}
+                    className="mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center"
+                >
+                    <motion.div variants={animation} className="mx-auto max-w-2xl lg:mx-0">
                         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
                             {project.title}
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-zinc-300">
                             {project.description}
                         </p>
-                    </div>
+                    </motion.div>
 
-                    <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+                    <motion.div variants={animation} className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
                         <div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
                             {links.map((link) => (
                                 <Link target="_blank" key={link.label} href={link.href}>
@@ -113,8 +129,8 @@ export const Header: React.FC<Props> = ({ project, views }) => {
                                 </Link>
                             ))}
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </header>
     );
