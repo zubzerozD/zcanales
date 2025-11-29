@@ -14,7 +14,7 @@ export default function Home() {
         initial={{ scaleX: 0, opacity: 0 }}
         animate={{ scaleX: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="hidden w-screen h-px md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 mb-8"
+        className=" w-screen h-px md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 mb-8"
       />
 
       {/* 2. Partículas (Fondo profundo) - z-index: -10 */}
@@ -41,7 +41,7 @@ export default function Home() {
         initial={{ opacity: 0, scale: 0.8, letterSpacing: "-0.05em" }}
         animate={{ opacity: 1, scale: 1, letterSpacing: "0em" }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="py-3.5 px-0.5 z-10 text-4xl text-transparent bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"
+        className="py-1 px-0.5 z-10 text-4xl text-transparent bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"
       >
         zubzerozD
       </motion.h1>
@@ -51,7 +51,7 @@ export default function Home() {
         initial={{ scaleX: 0, opacity: 0 }}
         animate={{ scaleX: 1, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-        className="hidden w-screen h-px md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 mt-8"
+        className=" w-screen h-px md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 mt-8"
       />
 
       {/* 6. Texto descriptivo (Primer plano) - z-index: 20 */}
