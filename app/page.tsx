@@ -62,6 +62,8 @@ export default function Home() {
         transition={{ duration: 1, delay: 0.5 }}
         className="my-16 text-center relative z-20"
       >
+        <header className="relative flex items-center px-1 gap-2 border border-zinc-700 rounded-full shadow-2xl backdrop-blur-xl bg-zinc-900/50 
+          transition-all duration-500 ease-in-out py-1">
         <h2 className="text-sm md:text-base w-full px-4 text-center">
           Soluciones digitales y soporte técnico especializado.{" "}
           <Link
@@ -72,6 +74,7 @@ export default function Home() {
             Ver servicios
           </Link>
         </h2>
+        </header>
       </motion.div>
 
     </div>
