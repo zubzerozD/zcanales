@@ -17,7 +17,7 @@ import { AnimatePresence, motion } from "framer-motion";
 // Lista de proyectos para el desplegable (Puedes agregar más)
 const projectLinks = [
 	{ title: "Todos los proyectos", href: "/projects" },
-	{ title: "Test", href: "/projects/access" },
+	{ title: "Mcanales", href: "/projects/Mcanales" },
 ];
 
 export const Navigation: React.FC = () => {
