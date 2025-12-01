@@ -63,8 +63,8 @@ export default function Home() {
         className="my-16 text-center relative z-20"
       >
         <header className="relative flex items-center px-1 gap-2 border border-zinc-700 rounded-full shadow-2xl backdrop-blur-xl bg-zinc-900/50 
-          transition-all duration-500 ease-in-out py-1">
-        <h2 className="text-sm md:text-base w-full px-4 text-center">
+          transition-all duration-100 ease-in-out py-1">
+        <h2 className="text-sm text-zinc-250 md:text-base w-full px-4 text-center">
           Soluciones digitales y soporte técnico especializado.{" "}
           <Link
             target="_blank"
