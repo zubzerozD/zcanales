@@ -14,9 +14,9 @@ const socials = [
     },
     {
         icon: <Mail size={20} />,
-        href: "mailto:seba.canales10@gmail.com", // Recuerda actualizar esto con tu correo real si lo deseas
+        href: "mailto:zubzerozd.dev@gmail.com", // Recuerda actualizar esto con tu correo real si lo deseas
         label: "Email",
-        handle: "seba.canales10@gmail.com",
+        handle: "zubzerozd.dev@gmail.com",
     },
     {
         icon: <Github size={20} />,

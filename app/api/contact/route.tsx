@@ -19,7 +19,7 @@ export async function POST(req: Request) {
             from: "Contact Form <onboarding@resend.dev>",
 
             // CAMBIO AQUÍ: Pon tu correo registrado tal cual aparece en el error
-            to: ["seba.canales10@gmail.com"],
+            to: ["zubzerozd.dev@gmail.com"],
 
             subject: `Nuevo mensaje de ${name}`,
             text: `Has recibido un mensaje de contacto:\n\nNombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`,
