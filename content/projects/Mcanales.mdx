@@ -1,0 +1,29 @@
+---
+title: Plataforma Corporativa MCanales
+description: '"MCanales" es una aplicación web moderna diseñada como un portafolio y blog corporativo interactivo. El objetivo principal del sitio es presentar servicios profesionales y proyectos destacados, facilitando la conversión de visitantes a través de herramientas de contacto avanzadas.'
+url: https://mcanales.vercel.app
+date: 2025-11-17
+published: true
+---
+
+## Arquitectura Técnica
+
+El proyecto ha sido migrado exitosamente de una SPA (Single Page Application) en React a una arquitectura robusta renderizada en servidor (SSR) utilizando **Next.js 16 (App Router)** y **React 19**. Esta transición estratégica mejora significativamente el SEO y el tiempo de carga inicial.
+
+## Características Principales
+
+1. **Navegación Intuitiva**
+   - Estructura clara con secciones definidas: *Inicio, Servicios, Proyectos, Testimonios y Contacto*.
+   - Barra de navegación persistente y responsiva (`LayoutNavbar`) diseñada con **Tailwind CSS** para adaptarse a cualquier dispositivo.
+
+2. **Comunicación Directa (Backend Integrado)**
+   - A diferencia de sitios estáticos tradicionales, esta web posee capacidades de backend gracias a los **API Routes** de Next.js.
+   - Incluye un formulario de contacto funcional que procesa datos de forma segura y envía notificaciones por correo electrónico utilizando `nodemailer` (configurado mediante variables de entorno protegidas).
+
+3. **Diseño Moderno**
+   - Estilizado con **Tailwind CSS v4**, garantizando un diseño limpio, coherente y fácil de mantener.
+   - Tipografía optimizada y estructura semántica para mejorar la accesibilidad y la lectura.
+
+4. **Asistencia Inteligente (IA)** *(Futura actualización)*
+   - Integración de un **Chatbot de IA (Chatbase)** personalizado.
+   - El bot está configurado para operar en español, ofreciendo atención al cliente 24/7 y resolviendo dudas sobre los servicios de la empresa de manera inmediata.

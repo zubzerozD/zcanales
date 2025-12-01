@@ -5,15 +5,16 @@ import { Metadata } from "next";
 import { Navigation } from "./components/nav"; // <--- Importamos el componente
 import { SpeedInsights } from "@vercel/speed-insights/next"; // <--- Importamos Speed Insights
 
+
 export const metadata: Metadata = {
   title: {
     default: "zubzerozD",
     template: "%s | zubzerozD",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "",
   openGraph: {
     title: "zubzerozD",
-    description: "Co-founder of unkey.dev and founder of planetfall.io",
+    description: "",
     url: "https://zubzerozD",
     siteName: "zubzerozD",
     images: [
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    shortcut: "/favicon.png",
+    shortcut: "/public/zubzerozd.svg",
   },
 };
 
