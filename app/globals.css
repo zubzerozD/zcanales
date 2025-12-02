@@ -12,7 +12,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui;
   --font-display: var(--font-calsans);
-  
+
   /* Animaciones migradas */
   --animate-fade-in: fade-in 3s ease-in-out forwards;
   --animate-title: title 3s ease-out forwards;

@@ -4,6 +4,7 @@ import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Navigation } from "./components/nav"; // <--- Importamos el componente
 import { SpeedInsights } from "@vercel/speed-insights/next"; // <--- Importamos Speed Insights
+import { Footer } from "./components/footer"; // <--- Importamos el componente Footer
 
 
 export const metadata: Metadata = {
@@ -78,6 +79,7 @@ export default function RootLayout({
         <Navigation /> {/* <--- Aquí se renderiza el menú flotante */}
         {children}
         <SpeedInsights /> {/* <--- Aquí se renderiza Speed Insights */}
+        <Footer /> {/* <--- Aquí se renderiza el pie de página */}
       </body>
     </html>
   );
