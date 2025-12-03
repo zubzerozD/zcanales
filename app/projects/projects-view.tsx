@@ -39,7 +39,7 @@ export const ProjectsView: React.FC<ProjectsViewProps> = ({
                     Proyectos
                 </h2>
                 <p className="mt-4 text-zinc-400">
-                    Una cronología de mis trabajos y experimentos.
+                    Algunos de los proyectos serán de trabajo y otros los hago en mi tiempo libre.
                 </p>
             </motion.div>
 
