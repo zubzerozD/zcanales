@@ -1,0 +1,19 @@
+---
+title: Batalla Naval (Cliente-Servidor)
+description: Implementación del clásico juego de estrategia naval utilizando C++ y Sockets. Arquitectura cliente-servidor capaz de manejar múltiples partidas concurrentes contra la CPU.
+date: 2023-11-15
+published: true
+repository: https://github.com/zubzerozd/BatallaNaval_Player-vs-COM
+---
+
+## Descripción Técnica
+
+Este proyecto fue desarrollado como parte de la asignatura de Comunicación de Datos y Redes. El desafío principal fue implementar un protocolo de comunicación robusto entre el cliente (jugador) y el servidor (lógica del juego/CPU).
+
+### Características
+- **Arquitectura Cliente-Servidor:** Uso de Sockets TCP/IP para la transmisión de coordenadas y estados del tablero.
+- **Multihilo:** El servidor gestiona múltiples clientes simultáneamente mediante hilos (threads).
+- **Lógica de Juego:** Implementación de reglas completas, incluyendo posicionamiento aleatorio de barcos y validación de disparos.
+
+### Ejecución
+El proyecto se compila mediante `make` y permite configurar IP y Puerto dinámicamente para facilitar pruebas en red local.
