@@ -1,0 +1,23 @@
+---
+title: Monitor de Red IP (PingTest)
+description: Herramienta de monitoreo de red de alto rendimiento escrita en C++. Analiza la disponibilidad de una lista de direcciones IP y genera reportes detallados de latencia y pérdida de paquetes.
+date: 2023-09-05
+published: true
+repository: https://github.com/zubzerozd/PingTest
+---
+
+## Funcionalidad
+
+Herramienta de línea de comandos diseñada para administradores de red que necesitan verificar el estado (UP/DOWN) de múltiples dispositivos de manera rápida y automatizada.
+
+### Flujo de Trabajo
+1. **Entrada:** Lee un archivo de texto con una lista masiva de direcciones IP.
+2. **Procesamiento:** Envía una cantidad configurable de paquetes ICMP (Ping) a cada dirección.
+3. **Salida:** Genera un reporte estructurado detallando:
+   - IP analizada.
+   - Paquetes transmitidos/recibidos.
+   - Porcentaje de pérdida.
+   - Estado final de disponibilidad.
+
+### Uso
+Ideal para scripts de auditoría de red y diagnósticos rápidos de conectividad en infraestructuras grandes.
