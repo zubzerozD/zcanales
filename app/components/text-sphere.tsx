@@ -71,22 +71,22 @@ export const TextSphere = () => {
             {/* Estilos específicos para los tags generados dinámicamente */}
             <style jsx global>{`
         .tagcloud {
-          display: inline-block;
-          font-family: var(--font-inter);
-          font-size: 1rem;
-          font-weight: 500;
+            display: inline-block;
+            font-family: var(--font-inter);
+            font-size: 1rem;
+            font-weight: 500;
         }
         .tagcloud--item {
           color: #a1a1aa; /* zinc-400 */
-          text-transform: uppercase;
-          transition: all 0.3s ease;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
         }
         .tagcloud--item:hover {
           color: #ffffff; /* zinc-50 - blanco al pasar el mouse */
-          font-size: 1.1rem;
-          text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
-      `}</style>
+        `}</style>
         </div>
     );
 };
