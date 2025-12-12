@@ -9,7 +9,7 @@ export const Footer = () => {
                 {/* Copyright */}
                 <div className="text-zinc-500 text-sm text-center md:text-left">
                     <p>
-                        &copy; {new Date().getFullYear()} <span className="text-zinc-200">zubzerozd.com</span>
+                        &copy; {new Date().getFullYear()} <span className="text-zinc-200">zubzerozd</span>
                     </p>
                     <p className="mt-1 text-xs">
                         Todos los derechos reservados.
