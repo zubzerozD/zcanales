@@ -43,7 +43,7 @@ export default function Home() {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="py-1 px-0.5 z-10 text-4xl text-transparent bg-white cursor-default text-edge-outline font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text"
       >
-        zubzerozD
+        Sebastián Canales
       </motion.h1>
 
       {/* 5. Línea inferior */}

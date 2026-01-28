@@ -7,7 +7,7 @@ export default function TermsPage() {
                     <p className="lead">Última actualización: {new Date().toLocaleDateString()}</p>
 
                     <p>
-                        Bienvenido a <strong>zubzerozd.com</strong>. Al contratar nuestros servicios de soporte técnico o desarrollo web, usted acepta los siguientes términos y condiciones. Por favor, léalos cuidadosamente.
+                        Bienvenido a <strong>Sebastián Canales</strong>. Al contratar nuestros servicios de soporte técnico o desarrollo web, usted acepta los siguientes términos y condiciones. Por favor, léalos cuidadosamente.
                     </p>
 
                     <h3>1. Servicios de Soporte Técnico</h3>
