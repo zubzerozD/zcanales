@@ -9,15 +9,15 @@ import { Footer } from "./components/footer"; // <--- Importamos el componente F
 
 export const metadata: Metadata = {
   title: {
-    default: "zubzerozD",
-    template: "%s | zubzerozD",
+    default: "Sebastián Canales",
+    template: "%s | Sebastián Canales",
   },
-  description: "",
+  description: "Sebastián Canales - Portfolio",
   openGraph: {
-    title: "zubzerozD",
-    description: "",
+    title: "Sebastián Canales",
+    description: "Sebastián Canales - Portfolio",
     url: "https://zubzerozD",
-    siteName: "zubzerozD",
+    siteName: "Sebastián Canales",
     images: [
       {
         url: "https://zubzerozD/og.png",
