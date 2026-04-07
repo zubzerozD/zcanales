@@ -117,3 +117,6 @@ out/
 *.userprefs
 # Windows image file caches
 Thumbs.db
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
