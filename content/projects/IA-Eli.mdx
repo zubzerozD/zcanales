@@ -1,0 +1,36 @@
+---
+title: IA Eliana
+description: Motor de ajedrez de vanguardia inspirado en AlphaZero. Redes neuronales residuales, búsqueda por árbol de Monte Carlo (MCTS) y una interfaz web premium con personalidad dinámica.
+date: 2026-04-07
+published: true
+repository: zubzerozD/IA-Zero
+---
+
+# ♟️ IA Eliana - AlphaZero Chess Engine
+
+**IA Eliana** es un motor de ajedrez de vanguardia que fusiona una interfaz web premium (*Glassmorphism*) con un backend de alto rendimiento impulsado por redes neuronales residuales.
+
+## ✨ Características Destacadas
+
+| Característica | Descripción |
+| :--- | :--- |
+| **🧠 Cerebro AlphaZero** | Evaluación híbrida mediante **MCTS + ResNet** (PolicyValueNet). |
+| **🎮 Interfaz Glassmorphism** | Tablero responsivo con efectos de cristal y animaciones de piezas. |
+| **⚡ Pipeline Paralelo** | Extracción masiva de datos PGN (+700 partidas/seg) con multiprocesamiento. |
+| **⚙️ Dificultad Dinámica** | Control total sobre la profundidad de cálculo ajustando las simulaciónes MCTS. |
+
+## 🏗️ Arquitectura del Sistema
+
+Eliana no es un motor tradicional de fuerza bruta; su arquitectura imita el proceso de aprendizaje humano reforzado por computación masiva:
+- **Backend:** FastAPI maneja las peticiones del tablero.
+- **MCTS Search:** Búsqueda inteligente de movimientos.
+- **ResNet Model:** Proporciona probabilidades de movimiento (Policy) y evaluación del tablero (Value).
+
+## 🛠️ Tecnologías
+
+- **Backend:** Python, PyTorch (CUDA 12.4), FastAPI, Chess-Python.
+- **Frontend:** Next.js 15 (App Router), TypeScript, Lucide React, React-Chessboard.
+- **AI/ML:** ResNet (Residual Blocks), Monte Carlo Tree Search (MCTS), NumPy.
+
+---
+*Desarrollado para dominar el tablero byte a byte.* ♟️🔥
