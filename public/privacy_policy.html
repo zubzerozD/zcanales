@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad / Privacy Policy - Multiply</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --border-color: #e2e8f0;
+            --badge-bg: #eef2ff;
+            --badge-text: #4f46e5;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --text-primary: #f8fafc;
+                --text-secondary: #94a3b8;
+                --primary: #6366f1;
+                --primary-hover: #4f46e5;
+                --border-color: #334155;
+                --badge-bg: #312e81;
+                --badge-text: #e0e7ff;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .logo span.multi {
+            color: var(--primary);
+        }
+
+        .logo span.ply {
+            color: var(--text-secondary);
+        }
+
+        .lang-toggle {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .lang-toggle:hover {
+            background-color: var(--primary-hover);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .last-update {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            display: inline-block;
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Language visibility classes */
+        [lang="es"] {
+            display: block;
+        }
+
+        [lang="en"] {
+            display: none;
+        }
+
+        .lang-en [lang="es"] {
+            display: none;
+        }
+
+        .lang-en [lang="en"] {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="multi">Multi</span><span class="ply">ply</span>
+            </a>
+            <button class="lang-toggle" onclick="toggleLanguage()">Switch to English</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <!-- SPANISH HEADER -->
+            <div lang="es">
+                <h1>Política de Privacidad</h1>
+                <span class="last-update">Última actualización: 2 de junio de 2026</span>
+                <p>Esta política de privacidad rige el uso de la aplicación móvil <strong>Multiply</strong> ("la Aplicación") creada por <strong>zubzerozd</strong>.</p>
+            </div>
+
+            <!-- ENGLISH HEADER -->
+            <div lang="en">
+                <h1>Privacy Policy</h1>
+                <span class="last-update">Last updated: June 2, 2026</span>
+                <p>This privacy policy governs your use of the software application <strong>Multiply</strong> ("the Application") for mobile devices created by <strong>zubzerozd</strong>.</p>
+            </div>
+
+            <!-- SECTION 1 -->
+            <h2 lang="es">1. Información que recopila la Aplicación</h2>
+            <h2 lang="en">1. Information Obtained by the Application</h2>
+            
+            <div lang="es">
+                <p>La Aplicación recopila información de dos formas:</p>
+                <ul>
+                    <li><strong>Información proporcionada por el usuario:</strong> La Aplicación almacena localmente el nombre de usuario o apodo (nickname) que creas para llevar el registro de tus puntuaciones y configuraciones de perfil. Esta información se almacena localmente en la base de datos de tu dispositivo y opcionalmente se sincroniza en la nube.</li>
+                    <li><strong>Información recopilada automáticamente:</strong> La Aplicación utiliza servicios de terceros que pueden recopilar información utilizada para identificarte de forma única (como el identificador de publicidad de Google o el ID del dispositivo).</li>
+                </ul>
+            </div>
+            <div lang="en">
+                <p>The Application obtains information in two ways:</p>
+                <ul>
+                    <li><strong>User Provided Information:</strong> The Application stores locally the username or nickname you create to keep track of your scores and profile configurations. This information is stored locally in your device's database and optionally synchronized with the cloud.</li>
+                    <li><strong>Automatically Collected Information:</strong> The Application uses third-party services that may collect information used to uniquely identify you (such as your Google Advertising ID or device ID).</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 2 -->
+            <h2 lang="es">2. Servicios de Terceros</h2>
+            <h2 lang="en">2. Third-Party Services</h2>
+
+            <div lang="es">
+                <p>Para funcionar correctamente, la Aplicación requiere e integra los servicios de los siguientes proveedores externos, los cuales tienen sus propias políticas de privacidad sobre el tratamiento de datos:</p>
+                <ul>
+                    <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li>
+                    <li><a href="https://support.google.com/admob/answer/6128543?hl=es" target="_blank" rel="noopener">AdMob (Servicio de anuncios de Google)</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase / Firebase Crashlytics</a></li>
+                </ul>
+            </div>
+            <div lang="en">
+                <p>To function properly, the Application integrates services from the following external providers, who have their own privacy policies regarding data processing:</p>
+                <ul>
+                    <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li>
+                    <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener">AdMob (Google Advertising Service)</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase / Firebase Crashlytics</a></li>
+                </ul>
+            </div>
+
+            <!-- SECTION 3 -->
+            <h2 lang="es">3. Uso de la Información</h2>
+            <h2 lang="en">3. Use of Information</h2>
+
+            <div lang="es">
+                <p>La información recopilada se utiliza para:</p>
+                <ul>
+                    <li>Proporcionar y mantener las funciones del juego (guardar tu racha, nivel, monedas e historial de puntuaciones).</li>
+                    <li>Mostrar anuncios publicitarios a través de AdMob (incluyendo anuncios recompensados para duplicar monedas o activar el modo libre de anuncios temporal).</li>
+                    <li>Analizar el rendimiento técnico de la Aplicación y corregir posibles errores de programación (crashes).</li>
+                </ul>
+            </div>
+            <div lang="en">
+                <p>The collected information is used to:</p>
+                <ul>
+                    <li>Provide and maintain the game features (saving your streak, level, coins, and highscore history).</li>
+                    <li>Display advertisements via AdMob (including rewarded ads to double coins or temporarily activate ad-free mode).</li>
+                    <li>Analyze the technical performance of the Application and fix potential software errors (crashes).</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 4 -->
+            <h2 lang="es">4. Privacidad de Menores (COPPA / Familias)</h2>
+            <h2 lang="en">4. Children's Privacy (COPPA / Families)</h2>
+
+            <div lang="es">
+                <p>Multiply es un juego educativo diseñado para la práctica de tablas de multiplicar. Nos tomamos muy en serio la seguridad de los menores:</p>
+                <ul>
+                    <li>La Aplicación no solicita conscientemente datos de identificación personal a menores de 13 años (o la edad mínima correspondiente en tu jurisdicción).</li>
+                    <li>El nombre de usuario o apodo se guarda localmente en el dispositivo.</li>
+                    <li>Si eres padre o tutor y tienes conocimiento de que tu hijo nos ha proporcionado información personal, por favor contáctanos para que podamos realizar las acciones necesarias.</li>
+                </ul>
+            </div>
+            <div lang="en">
+                <p>Multiply is an educational game designed for practicing multiplication tables. We take children's safety very seriously:</p>
+                <ul>
+                    <li>The Application does not knowingly collect personally identifiable information from children under 13 (or the corresponding minimum age in your jurisdiction).</li>
+                    <li>The username or nickname is stored locally on the device.</li>
+                    <li>If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we can take the necessary actions.</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 5 -->
+            <h2 lang="es">5. Seguridad</h2>
+            <h2 lang="en">5. Security</h2>
+
+            <div lang="es">
+                <p>Nos esforzamos por proteger la confidencialidad de tu información local y las sincronizaciones básicas de Firebase. Ten en cuenta que, aunque procuramos proveer una seguridad razonable para la información que procesamos y mantenemos, ningún sistema de seguridad puede prevenir todas las brechas de seguridad potenciales.</p>
+            </div>
+            <div lang="en">
+                <p>We strive to protect the confidentiality of your local information and basic Firebase synchronization. Please be aware that, although we endeavor to provide reasonable security for information we process and maintain, no security system can prevent all potential security breaches.</p>
+            </div>
+
+            <!-- SECTION 6 -->
+            <h2 lang="es">6. Cambios a esta Política de Privacidad</h2>
+            <h2 lang="en">6. Changes to This Privacy Policy</h2>
+
+            <div lang="es">
+                <p>Esta Política de Privacidad puede ser actualizada periódicamente por cualquier motivo. Te sugerimos consultar esta página regularmente para estar al tanto de cualquier cambio.</p>
+            </div>
+            <div lang="en">
+                <p>This Privacy Policy may be updated from time to time for any reason. You are advised to consult this Privacy Policy regularly for any changes.</p>
+            </div>
+
+            <!-- SECTION 7 -->
+            <h2 lang="es">7. Contacto</h2>
+            <h2 lang="en">7. Contact Us</h2>
+
+            <div lang="es">
+                <p>Si tienes preguntas sobre la privacidad mientras usas la Aplicación, o deseas realizar consultas sobre nuestras prácticas, por favor contáctanos por correo electrónico en: <strong>zubzerozd.dev@gmail.com</strong></p>
+            </div>
+            <div lang="en">
+                <p>If you have any questions regarding privacy while using the Application, or have questions about our practices, please contact us via email at: <strong>zubzerozd.dev@gmail.com</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div lang="es">Desarrollado con ❤️ por zubzerozd</div>
+        <div lang="en">Developed with ❤️ by zubzerozd</div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const button = document.querySelector('.lang-toggle');
+            
+            if (body.classList.contains('lang-en')) {
+                body.classList.remove('lang-en');
+                document.documentElement.lang = 'es';
+                button.textContent = 'Switch to English';
+            } else {
+                body.classList.add('lang-en');
+                document.documentElement.lang = 'en';
+                button.textContent = 'Cambiar a Español';
+            }
+        }
+    </script>
+</body>
+</html>
