@@ -167,20 +167,12 @@
         }
 
         /* Language visibility classes */
-        [lang="es"] {
-            display: block;
+        body:not(.lang-en) [lang="en"] {
+            display: none !important;
         }
 
-        [lang="en"] {
-            display: none;
-        }
-
-        .lang-en [lang="es"] {
-            display: none;
-        }
-
-        .lang-en [lang="en"] {
-            display: block;
+        body.lang-en [lang="es"] {
+            display: none !important;
         }
     </style>
 </head>
