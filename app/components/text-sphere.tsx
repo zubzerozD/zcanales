@@ -3,32 +3,64 @@ import React, { useEffect, useRef } from "react";
 import TagCloud from "TagCloud";
 
 const texts = [
+    // Frontend
     "Next.js",
     "React",
     "TypeScript",
-    "TailwindCSS",
-    "Prisma",
-    "Node.js",
-    "Vercel",
-    "Git",
-    "GitHub",
-    "Docker",
-    "Linux",
-    "SQL",
-    "Figma",
-    "Velite",
-    "Redis",
-    "MongoDB",
-    "MySQL",
-    "PostgreSQL",
-    "REST API",
     "JavaScript",
+    "TailwindCSS",
     "HTML5",
     "CSS3",
     "Framer Motion",
     "Vite",
+    "Vue.js",
+    
+    // Backend
+    "Node.js",
+    "Python",
+    "Kotlin",
+    "Java",
+    "C++",
+    "PHP",
+    "Go",
+    
+    // Databases
+    "SQL",
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Firebase",
+    "Prisma",
+    
+    // DevOps & Tools
+    "Git",
+    "GitHub",
+    "Docker",
+    "Linux",
+    "Vercel",
+    "AWS",
+    "Nginx",
+    
+    // Mobile & Desktop
+    "React Native",
+    "Flutter",
+    "Android",
+    
+    // AI & ML
+    "TensorFlow",
+    "PyTorch",
+    "OpenAI",
+    
+    // Design & Other
+    "Figma",
+    "REST API",
+    "GraphQL",
+    "WebSocket",
+    "Velite",
     "ESLint",
     "NextAuth",
+    "Zod",
 ];
 
 export const TextSphere = () => {
