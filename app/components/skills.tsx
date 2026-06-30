@@ -1,31 +1,33 @@
 "use client";
 import { motion } from "framer-motion";
+import { Monitor, Server, Wrench, Sparkles } from "lucide-react";
+import { ReactNode } from "react";
 
 type SkillCategory = {
     name: string;
-    icon: string;
+    icon: ReactNode;
     skills: string[];
 };
 
 const categories: SkillCategory[] = [
     {
         name: "Frontend",
-        icon: "🎨",
+        icon: <Monitor size={28} className="text-zinc-400" />,
         skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     },
     {
         name: "Backend",
-        icon: "⚙️",
+        icon: <Server size={28} className="text-zinc-400" />,
         skills: ["Node.js", "Firebase", "PostgreSQL", "Redis", "REST APIs"],
     },
     {
         name: "Herramientas",
-        icon: "🛠️",
+        icon: <Wrench size={28} className="text-zinc-400" />,
         skills: ["Git", "GitHub", "Docker", "Linux", "VS Code"],
     },
     {
         name: "Diseño & Otros",
-        icon: "✨",
+        icon: <Sparkles size={28} className="text-zinc-400" />,
         skills: ["Figma", "UI/UX", "SEO", "IA/ML", "Automatización"],
     },
 ];
@@ -58,7 +60,7 @@ export const Skills = () => {
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors"
                     >
-                        <div className="text-3xl mb-4">{category.icon}</div>
+                        <div className="mb-4">{category.icon}</div>
                         <h3 className="text-lg font-bold text-zinc-100 font-display mb-4">
                             {category.name}
                         </h3>

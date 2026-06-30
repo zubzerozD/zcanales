@@ -17,7 +17,7 @@ export const About = () => {
                 </h2>
             </motion.div>
 
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4">
                 {/* Lado izquierdo - Bio */}
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
