@@ -1,0 +1,47 @@
+---
+title: QuanThia
+description: "Agencia de ingeniería de software corporativa. Plataforma completa con admin panel, autenticación, formularios de proyectos, sistema de quotes y tracking de analytics."
+url: https://quanthia.cl
+date: 2026-06-14
+published: true
+---
+
+## Sobre el Proyecto
+
+QuanThia es la plataforma web de mi agencia de ingeniería de software corporativa, ubicada en el Biobío, Chile. No es un sitio estático — es una aplicación completa con backend, autenticación y panel de administración.
+
+## Arquitectura
+
+- **API Routes**: Contacto con nodemailer (TLS), tracking de analytics, autenticación
+- **Admin Panel**: Gestión de proyectos, testimonios y formularios de contacto
+- **QuoteModal**: Sistema de cotización con validación Zod y toast feedback
+- **i18n**: Internacionalización completa (UI + messages)
+- **Analytics**: Detección de dispositivo y tracking robusto
+
+## Funcionalidades
+
+1. **Formulario de Contacto**
+   - Validación con Zod
+   - Envío de emails con nodemailer
+   - Manejo de errores con logging
+
+2. **Sistema de Proyectos**
+   - CRUD completo desde admin
+   - Compresión y manejo de imágenes reutilizable
+   - Estados de submit tipados
+
+3. **Testimonios**
+   - Importación desde node:crypto
+   - Parsing numérico y error logging
+
+4. **Accessibility**
+   - Botones accesibles con aria-label
+   - Sidebar mobile con button accesible
+
+## Stack Técnico
+
+- Next.js (App Router)
+- TypeScript
+- Zod (validación)
+- Nodemailer (emails)
+- Tailwind CSS

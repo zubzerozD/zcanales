@@ -10,6 +10,8 @@ export const ReportView: React.FC<{ slug: string }> = ({ slug }) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ slug }),
+        }).catch(() => {
+            // Silently ignore view tracking errors
         });
     }, [slug]);
 
