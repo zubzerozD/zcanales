@@ -1,5 +1,6 @@
 "use client";
-import { ArrowLeft, Eye, Github, Instagram, Twitter } from "lucide-react";
+import { ArrowLeft, Eye, Github, Instagram } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, Variants } from "framer-motion"; // <--- 1. Importamos Variants
@@ -9,6 +10,7 @@ type Props = {
         url?: string;
         title: string;
         description: string;
+        image?: string;
         repository?: string;
     };
     views: number;
@@ -132,6 +134,24 @@ export const Header: React.FC<Props> = ({ project, views }) => {
                             ))}
                         </div>
                     </motion.div>
+
+                    {project.image && (
+                        <motion.div
+                            variants={animation}
+                            className="mt-16 mx-auto max-w-5xl w-full"
+                        >
+                            <div className="relative rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={1920}
+                                    height={1080}
+                                    className="w-full h-auto"
+                                    priority
+                                />
+                            </div>
+                        </motion.div>
+                    )}
                 </motion.div>
             </div>
         </header>

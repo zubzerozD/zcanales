@@ -13,6 +13,7 @@ const projects = defineCollection({
         slug: s.path(),
         title: s.string(),
         description: s.string(),
+        image: s.string().optional(),
         date: s.isodate().optional(),
         published: s.boolean().default(true),
         url: s.string().optional(),
