@@ -16,16 +16,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sebastián Canales",
     description: "Sebastián Canales - Portfolio",
-    url: "https://zubzerozD",
+    url: "https://sebastian-canales.quanthia.cl",
     siteName: "Sebastián Canales",
     images: [
       {
-        url: "https://zubzerozD/og.png",
+        url: "https://sebastian-canales.quanthia.cl/og.png",
         width: 1920,
         height: 1080,
       },
     ],
-    locale: "en-US",
+    locale: "es-CL",
     type: "website",
   },
   robots: {
@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "zubzerozD",
+    title: "Sebastián Canales",
     card: "summary_large_image",
   },
   icons: {
-    shortcut: "/public/zubzerozd.svg",
+    shortcut: "/zubzerozd.svg",
   },
 };
 

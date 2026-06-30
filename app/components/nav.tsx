@@ -17,6 +17,10 @@ import { AnimatePresence, motion } from "framer-motion";
 // Lista de proyectos para el desplegable (Puedes agregar más)
 const projectLinks = [
 	{ title: "Todos los proyectos", href: "/projects" },
+	{ title: "QuanThia", href: "/projects/QuanThia" },
+	{ title: "PAES Studio", href: "/projects/PaesStudio" },
+	{ title: "VYRON", href: "/projects/Vyron" },
+	{ title: "MultiplyApp", href: "/projects/MultiplyApp" },
 	{ title: "Mcanales", href: "/projects/Mcanales" },
 ];
 

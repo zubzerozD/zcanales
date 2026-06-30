@@ -1,6 +1,5 @@
 import React from "react";
 import { projects } from "@/.velite";
-import { Navigation } from "../components/nav";
 import { Redis } from "@upstash/redis";
 import { ProjectsView } from "./projects-view";
 
@@ -28,7 +27,6 @@ export default async function ProjectsPage() {
 
     return (
         <div className="relative pb-16">
-            <Navigation />
             {/* Pasamos la lista única ordenada */}
             <ProjectsView projects={allProjects} views={views} />
         </div>

@@ -1,0 +1,50 @@
+---
+title: MultiplyApp
+description: "App Android educativa para practicar tablas de multiplicar. GameViewModel, misiones diarias, animaciones de confeti, ads y publicación en Google Play."
+date: 2026-06-29
+published: true
+---
+
+## Sobre el Proyecto
+
+MultiplyApp es una aplicación Android educativa diseñada para ayudar a niños y jóvenes a practicar tablas de multiplicar de forma divertida y gamificada.
+
+## Arquitectura
+
+- **MVVM**: GameViewModel separado de MainActivity para reducir superficie de crash
+- **Firebase Firestore**: Persistencia de datos en la nube
+- **Lifecycle ViewModel Compose**: Gestión de ciclo de vida moderna
+
+## Funcionalidades
+
+1. **Sistema de Juego**
+   - Practicar tablas de multiplicar
+   - Progresión y puntajes
+   - Estado persistente entre sesiones
+
+2. **Misiones Diarias (DailyQuestManager)**
+   - Quests diarios para mantener engagement
+   - Sistema de recompensas
+
+3. **Gamificación**
+   - Animaciones de confeti (ConfettiOverlay)
+   - Efectos visuales de celebración
+   - Contenido optimizado (40 partículas vs 120 originales)
+
+4. **Monetización**
+   - Integración con ads de Google
+   - Banner y intersticiales
+
+## Estabilidad
+
+- Operaciones de DB fuera del main thread (Dispatchers.IO)
+- Excepción global con logging de crashes
+- Manejo de errores robusto para Google Play
+
+## Stack Técnico
+
+- Kotlin
+- Jetpack Compose
+- Firebase Firestore
+- Google Play Services
+- i18n (internacionalización)
