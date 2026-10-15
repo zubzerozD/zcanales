@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import React from "react";
 import { projects } from "@/.velite";
 import { ProjectsView } from "./projects-view";
 import { getViews } from "@/util/views";
+
+export const metadata: Metadata = {
+    title: "Proyectos",
+    description:
+        "Proyectos de Sebastián Canales: aplicaciones web con Next.js, TypeScript, React, Node.js y PostgreSQL. Portafolio completo con casos de estudio.",
+    alternates: {
+        canonical: "/projects",
+    },
+};
 
 export const revalidate = 60;
 

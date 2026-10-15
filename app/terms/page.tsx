@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Términos y Condiciones",
+    description:
+        "Términos y condiciones de los servicios de soporte técnico y desarrollo web de Sebastián Canales (ZubzerozD): garantías, pagos y propiedad intelectual.",
+    alternates: {
+        canonical: "/terms",
+    },
+};
+
 export default function TermsPage() {
     return (
         <div className="bg-zinc-900 min-h-screen flex flex-col">

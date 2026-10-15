@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { projects } from "@/.velite";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
@@ -20,6 +21,32 @@ export async function generateStaticParams() {
         .map((p) => ({
             slug: p.slugAsParams,
         }));
+}
+
+export async function generateMetadata(
+    props: Props,
+): Promise<Metadata> {
+    const { slug } = await props.params;
+    const project = projects.find((p) => p.slugAsParams === slug);
+
+    if (!project) {
+        return {};
+    }
+
+    return {
+        title: project.title,
+        description: project.description,
+        alternates: {
+            // Ruta relativa: metadataBase del layout la convierte en la URL canónica.
+            canonical: `/projects/${project.slugAsParams}`,
+        },
+        openGraph: {
+            title: project.title,
+            description: project.description,
+            url: `/projects/${project.slugAsParams}`,
+            type: "article",
+        },
+    };
 }
 
 export default async function PostPage(props: Props) {

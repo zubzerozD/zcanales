@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { Footer } from "../components/footer";
+
+export const metadata: Metadata = {
+    title: "Política de Privacidad",
+    description:
+        "Política de privacidad del sitio de Sebastián Canales: qué datos se recogen en el formulario de contacto, cómo se usan y con qué tecnologías se procesan.",
+    alternates: {
+        canonical: "/privacy",
+    },
+};
 
 export default function PrivacyPage() {
     return (

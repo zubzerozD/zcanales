@@ -8,14 +8,20 @@ import { Footer } from "./components/footer"; // <--- Importamos el componente F
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sebastian-canales.quanthia.cl"),
   title: {
-    default: "Sebastián Canales",
+    default: "Sebastián Canales — Full-Stack Developer (Next.js, TypeScript, React)",
     template: "%s | Sebastián Canales",
   },
-  description: "Sebastián Canales - Portfolio",
+  description:
+    "Portafolio de Sebastián Canales, Ingeniero Civil en Informática y Full-Stack Developer. Proyectos con Next.js, TypeScript, React, Node.js y PostgreSQL.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Sebastián Canales",
-    description: "Sebastián Canales - Portfolio",
+    title: "Sebastián Canales — Full-Stack Developer",
+    description:
+      "Portafolio de Sebastián Canales, Ingeniero Civil en Informática y Full-Stack Developer. Proyectos con Next.js, TypeScript, React, Node.js y PostgreSQL.",
     url: "https://sebastian-canales.quanthia.cl",
     siteName: "Sebastián Canales",
     images: [
