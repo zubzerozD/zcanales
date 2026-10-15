@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "header", "key": "host", "value": "zcanales.vercel.app" }],
+      "destination": "https://sebastian-canales.quanthia.cl/:path*",
+      "permanent": true
+    }
+  ]
+}
