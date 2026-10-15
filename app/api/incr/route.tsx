@@ -1,7 +1,6 @@
-import { Redis } from "@upstash/redis";
 import { NextRequest, NextResponse } from "next/server";
+import { incrementView, isFirstView } from "@/util/views";
 
-const redis = Redis.fromEnv();
 export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
@@ -24,14 +23,13 @@ export async function POST(req: NextRequest) {
             .map((b) => b.toString(16).padStart(2, "0"))
             .join("");
 
-        const isNew = await redis.set(["deduplicate", hash, slug].join(":"), true, {
-            nx: true,
-            ex: 24 * 60 * 60,
-        });
+        // Deduplicación 24h por IP (SHA-256): false solo si ya fue contada.
+        // Si Redis falla, isFirstView devuelve true y el incr falla silencioso.
+        const isNew = await isFirstView(hash, slug);
         if (!isNew) {
             return new NextResponse(null, { status: 202 });
         }
     }
-    await redis.incr(["pageviews", "projects", slug].join(":"));
+    await incrementView(slug);
     return new NextResponse(null, { status: 202 });
 }

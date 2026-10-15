@@ -3,8 +3,8 @@ import { projects } from "@/.velite";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "./header";
 import { ReportView } from "./view";
-import { Redis } from "@upstash/redis";
 import { ArticleContent } from "./article-content"; // <--- Importamos el nuevo componente
+import { getView } from "@/util/views";
 
 export const revalidate = 60;
 
@@ -13,8 +13,6 @@ type Props = {
         slug: string;
     }>;
 };
-
-const redis = Redis.fromEnv();
 
 export async function generateStaticParams() {
     return projects
@@ -34,8 +32,7 @@ export default async function PostPage(props: Props) {
         notFound();
     }
 
-    const views =
-        (await redis.get<number>(["pageviews", "projects", slug].join(":"))) ?? 0;
+    const views = await getView(slug);
 
     return (
         <div className="bg-zinc-900 min-h-screen">

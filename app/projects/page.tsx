@@ -1,20 +1,13 @@
 import React from "react";
 import { projects } from "@/.velite";
-import { Redis } from "@upstash/redis";
 import { ProjectsView } from "./projects-view";
+import { getViews } from "@/util/views";
 
-const redis = Redis.fromEnv();
 export const revalidate = 60;
 
 export default async function ProjectsPage() {
-    const views = (
-        await redis.mget<number[]>(
-            ...projects.map((p) => ["pageviews", "projects", p.slugAsParams].join(":")),
-        )
-    ).reduce((acc, v, i) => {
-        acc[projects[i].slugAsParams] = v ?? 0;
-        return acc;
-    }, {} as Record<string, number>);
+    // Redis nunca tira esta página: si falla, todas las vistas quedan en 0.
+    const views = await getViews(projects.map((p) => p.slugAsParams));
 
     // Ordenamos TODOS los proyectos por fecha (Más reciente primero)
     const allProjects = projects
